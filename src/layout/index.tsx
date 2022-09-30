@@ -14,7 +14,7 @@ export function Layout({
   children,
 }: LayoutProps) {
   return (
-    <>
+    <div className="dark:bg-transparent bg-gray-100 bg-food-pattern-white dark:bg-food-pattern">
       <Head>
         <title>{title}</title>
         <meta name="description" content={description} />
@@ -27,9 +27,12 @@ export function Layout({
         <LoginButton />
         <ToggleThemeButton />
       </nav>
-      <main className="container mx-auto flex flex-col items-center justify-center min-h-[calc(100vh-60px)] p-4">
+      <main
+        className="container mx-auto flex flex-col items-center
+      justify-center min-h-[calc(100vh-60px)] p-4"
+      >
         {children}
       </main>
-    </>
+    </div>
   );
 }
